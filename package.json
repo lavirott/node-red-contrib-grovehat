@@ -1,0 +1,33 @@
+{
+  "name": "node-red-contrib-grovehat",
+  "version": "0.0.5",
+  "description": "Node-RED addon for accessing Grove 4 Digit Display through out Grove Base Hat",
+  "license": "MIT",
+  "author": "Stéphane Lavirotte <stephane@lavirotte.com>",
+  "contributors": [
+    {
+      "name": "Stéphane Lavirotte",
+      "email": "stephane@lavirotte.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lavirott/node-red-contrib-grovehat"
+  },
+  "node-red": {
+    "nodes": {
+      "grove4digitdisplay": "grove_4_digit_display.js"
+		}
+	},
+  "dependencies": {
+    "node-grovehat": "https://github.com/lavirott/node-grovehat"
+  },
+  "keywords": [
+	  "node-red",
+    "raspberry",
+    "pi",
+    "grove",
+    "hat"
+  ],
+  "readmeFilename": "README.md"
+}

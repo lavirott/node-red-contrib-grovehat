@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  RED.nodes.registerType('grove-4-digit-display',{
+    category: 'Grove',
+    color: '#C6DBEF',
+    defaults: {
+      name: {value:""}
+    },
+    inputs:1,
+    outputs:0,
+    icon: "grove.png",
+    label: function() {
+      return this.name||"4 Digit Display";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="grove-4-digit-display">
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="grove-4-digit-displayy">
+  <p>Node to address the Grove 4 digit Diaply module</p>
+</script>
