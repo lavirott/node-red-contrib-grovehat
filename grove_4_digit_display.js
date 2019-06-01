@@ -3,7 +3,10 @@ module.exports = function (RED) {
 	
 	function Grove4DigitDisplayNode(config) {
 		RED.nodes.createNode(this, config);
-		this.pin = 5;
+		this.pin = parseInt(config.pin) || 5;
+
+		if (RED.settings.verbose) { this.log("Grove4DigitDisplay: Pin: " + this.pin); }
+		
 		var display = new Grove4DigitDisplay(this.pin, this.pin + 1);
 
 		var node = this;
