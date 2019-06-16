@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  RED.nodes.registerType('grove-analog-sensor',{
+    category: 'Grove',
+    color: '#C6DBEF',
+    defaults: {
+      name: {value:""},
+      pin:  {value: "0", required: true}
+    },
+    inputs: 0,
+    outputs: 1,
+    icon: "grove.png",
+    label: function() {
+      return this.name||"Analog Sensor";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="grove-analog-sensor">
+  <div class="form-row" id="grovehat-name-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row" id="grovehat-pin-row">
+    <label for="node-input-pin"><i class="fa fa-plug"></i> Analog Pin</label>
+    <select id="node-input-pin">
+        <option value="0">Analog 0</option>
+        <option value="2">Analog 2</option>
+        <option value="4">Analog 4</option>
+        <option value="6">Analog 6</option>
+    </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="grove-analog-sensor">
+  <p>Node to address any Grove analog sensor.</p>
+</script>
