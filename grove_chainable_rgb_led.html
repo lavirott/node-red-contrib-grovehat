@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  RED.nodes.registerType('grove-chainable-rgb-led',{
+    category: 'Grove',
+    color: '#C6DBEF',
+    defaults: {
+      name: {value:""},
+      pin:  {value: "5", required: true}
+    },
+    inputs: 1,
+    outputs: 0,
+    icon: "grove.png",
+    label: function() {
+      return this.name||"Chainable RGB Led";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="grove-chainable-rgb-led">
+  <div class="form-row" id="grovehat-name-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row" id="grovehat-pin-row">
+    <label for="node-input-pin"><i class="fa fa-plug"></i> Digital Pin</label>
+    <select id="node-input-pin">
+        <option value="5">Digital 5</option>
+        <option value="16">Digital 16</option>
+        <option value="18">Digital 18</option>
+        <option value="22">Digital 22</option>
+        <option value="24">Digital 24</option>
+        <option value="26">Digital 26</option>
+    </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="grove-chainable-rgb-led">
+  <p>Node to address the Grove Chainable RGB Led modules</p>
+</script>
