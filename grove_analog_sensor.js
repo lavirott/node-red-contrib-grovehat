@@ -10,9 +10,17 @@ module.exports = function (RED) {
 		var analogSensor = new GroveAnalogSensor();
 
 		var node = this;
+		//console.log(analogSensor.name() + " " + analogSensor.version());
+/* 		
+		setTimeout(function(){
+			node.send({ topic: "pi/" + this.pin, payload: analogSensor.read(this.pin) });
+		}, 250);
+		 */
+
 		node.on('input', function (msg) {
-			analogSensor.read(this.pin);
+			node.send({topic: "pi/" + this.pin, payload: analogSensor.read(this.pin) });
 		});
+		
 	}
 	RED.nodes.registerType("grove-analog-sensor", GroveAnalogSensorNode);
 }
